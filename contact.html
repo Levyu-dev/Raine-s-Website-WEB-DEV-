@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <header>
+
+            <div class="top-container" id="logo">
+                <img src="" alt="Raine's Cakes and Patries logo">
+
+                <nav id="nav-bar">
+                    <a href="Home.html">Home</a>
+                    <a href="About.html">About Us</a>
+                    <a href="Products.html">Products</a>
+                    <a href="Gallery.html">Gallery</a>
+                    <a href="Contact.html">Contact Us</a>
+                </nav>
+            </div>
+
+        </header>
+
+        <div class="main-container" id="content">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or feedback, feel free to reach out to us!</p>
+            
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="contact-number">Contact Number:</label><br>
+                <input type="tel" id="contact-number" name="contact-number" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <label for="rating">Rate your experience:</label><br>
+                <input type="radio" id="excellent" name="rating" value="excellent" required>
+                <label for="excellent">Excellent</label><br>
+                <input type="radio" id="good" name="rating" value="good" required>
+                <label for="good">Good</label><br>
+                <input type="radio" id="average" name="rating" value="average" required>
+                <label for="average">Average</label><br>
+                <input type="radio" id="poor" name="rating" value="poor" required>
+                <label for="poor">Poor</label><br>
+                <input type="radio" id="very-poor" name="rating" value="very-poor" required>
+                <label for="very-poor">Very Poor</label><br><br>
+
+                <label for="branch">Store Branch:</label><br>
+                <select id="branch" name="branch" required>
+                    <option value="branch1">Infante St., Molo</option>
+                    <option value="branch2">Lopez Jaena St., Jaro</option>
+                </select><br><br>
+
+                <label for="improvement">Things that Need Improvement:</label><br>
+                <input type="checkbox" id="service" name="improvement" value="service">
+                <label for="service">Service Quality</label><br>
+                <input type="checkbox" id="cleanliness" name="improvement" value="cleanliness">
+                <label for="cleanliness">Cleanliness</label><br>
+                <input type="checkbox" id="productivity" name="improvement" value="productivity">
+                <label for="productivity">Productivity</label><br><br>
+
+                <label for="date-time">Date and Time of Service:</label><br>
+                <input type="date" id="date-time" name="date" required>
+                <input type="time" id="date-time" name="time" required><br><br>
+
+                <label for="message">Suggestions:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <label for="file">Upload a file (optional):</label><br>
+                <input type="file" id="file" name="file"><br><br>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+
+    </body>
+
+</html>
