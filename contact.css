@@ -1,0 +1,147 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFEED6;
+    font-family:  Georgia, "Times New Roman", serif;
+    margin-left: 90px;
+    margin-top: 0;
+    box-shadow: inset 0px 0px 12px 0px rgba(245, 153, 198, 1.00);
+    border-radius: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#logo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#nav-bar{
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.sidebar{
+  height: 100%; 
+  width: 100px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #FFEED6;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar a{
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #4A4A4A;
+  display: block;
+}
+
+.form{
+    padding: 20px;
+    margin-left: 80px;
+    font-family:  Georgia, "Times New Roman", serif;
+    background-color: #FFEED6;
+}
+
+.form h1{
+    text-align: center;
+    color: #4A4A4A;
+    font-size: 40px;
+}
+
+.form p{
+    text-align: center;
+    color: #4A4A4A;
+}
+
+.form p{
+    font-family: Arial, sans-serif;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group{
+  padding: 5px;
+  width: 50%;
+}
+
+.form label{
+    color: #4A4A4A;
+}
+
+.form input[type="text"],
+.form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+}
+
+.form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+}
+
+.form input[type="number"]{
+    width: 10%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+}
+
+.form input[type="password"]{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+}
+
+.form input[type="submit"]{
+    background-color: #F599C6;
+    color: #4A4A4A;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form input[type="reset"]{
+    background-color: #F599C6;
+    color: #4A4A4A;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
