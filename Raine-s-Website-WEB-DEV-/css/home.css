@@ -1,0 +1,300 @@
+/* Home page palette and landing composition */
+:root {
+    --home-pink: #F599C6;
+    --home-cream: #FFEED6;
+    --home-dark-gray: #4A4A4A;
+    --home-white: #FFFFFF;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--home-cream);
+    color: var(--home-dark-gray);
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.home-main {
+    box-sizing: border-box;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    padding: 42px 32px 72px;
+    background-color: var(--home-cream);
+}
+
+.home-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+    gap: clamp(32px, 6vw, 88px);
+    align-items: center;
+    width: min(100%, 1320px);
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+.hero-copy {
+    position: relative;
+    padding: 24px 0 24px 26px;
+    border-left: 3px solid var(--home-pink);
+}
+
+.hero-copy::before {
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--home-pink);
+    content: "";
+}
+
+.hero-kicker,
+.section-kicker {
+    margin: 0 0 16px;
+    color: var(--home-pink);
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    color: var(--home-dark-gray);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.8rem, 5.5vw, 5.4rem);
+    font-weight: 700;
+    line-height: 0.98;
+}
+
+.hero-description {
+    max-width: 480px;
+    margin: 26px 0 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.home-order-button {
+    margin-top: 28px;
+    padding: 14px 26px;
+    border: 1px solid var(--home-pink);
+    border-radius: 7px;
+    background-color: var(--home-pink);
+    box-shadow: 0 5px 0 rgba(74, 74, 74, 0.12);
+    cursor: pointer;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.home-order-button a {
+    color: var(--home-dark-gray);
+    font: 700 13px "Poppins", Arial, sans-serif;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+.home-order-button:hover {
+    background-color: var(--home-dark-gray);
+    transform: translateY(-2px);
+}
+
+.home-order-button:hover a {
+    color: var(--home-cream);
+}
+
+.hero-note {
+    margin: 30px 0 0;
+    color: var(--home-pink);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.hero-note span {
+    margin: 0 8px;
+}
+
+.hero-image-frame {
+    position: relative;
+    min-height: 390px;
+    overflow: hidden;
+    border: 1px solid var(--home-pink);
+    border-radius: 18px 18px 18px 70px;
+    background-color: var(--home-cream);
+    box-shadow: 0 14px 30px rgba(74, 74, 74, 0.14);
+}
+
+.hero-image-frame::after {
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    width: 42px;
+    height: 3px;
+    background-color: var(--home-pink);
+    content: "";
+}
+
+.hero-image-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+}
+
+.hero-image-frame > span {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--home-pink);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    transform: rotate(90deg) translateX(100%);
+    transform-origin: right top;
+}
+
+.home-introduction {
+    width: min(100%, 760px);
+    margin: 58px auto 0;
+    padding: 30px 24px;
+    border-top: 1px solid var(--home-pink);
+    border-bottom: 1px solid var(--home-pink);
+    text-align: center;
+}
+
+.home-introduction .section-kicker {
+    margin-bottom: 12px;
+}
+
+.home-introduction > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: min(100%, 1120px);
+    margin: 36px auto 0;
+}
+
+.feature-block {
+    padding: 24px 22px 26px;
+    border: 1px solid var(--home-pink);
+    border-radius: 10px;
+    background-color: var(--home-white);
+}
+
+.feature-number {
+    color: var(--home-pink);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.feature-block h2 {
+    margin: 18px 0 10px;
+    color: var(--home-dark-gray);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.35rem;
+}
+
+.feature-block p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+footer {
+    box-sizing: border-box;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    padding: 26px 32px 30px;
+    border-top: 1px solid var(--home-pink);
+    background-color: var(--home-white);
+    color: var(--home-dark-gray);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px auto;
+}
+
+@media (max-width: 900px) {
+    .home-main {
+        padding: 34px 24px 56px;
+    }
+
+    .home-hero {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.85fr);
+        gap: 32px;
+        min-height: 420px;
+    }
+
+    .hero-image-frame,
+    .hero-image-frame img {
+        min-height: 320px;
+    }
+
+    .home-features {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .home-main,
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .home-main {
+        padding: 28px 16px 48px;
+    }
+
+    .home-hero {
+        display: flex;
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+    }
+
+    .hero-copy {
+        padding-left: 18px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .hero-image-frame,
+    .hero-image-frame img {
+        min-height: 260px;
+    }
+
+    .home-introduction {
+        margin-top: 42px;
+        padding: 24px 12px;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+        margin-top: 24px;
+    }
+
+    footer {
+        padding: 22px 16px 26px;
+    }
+}

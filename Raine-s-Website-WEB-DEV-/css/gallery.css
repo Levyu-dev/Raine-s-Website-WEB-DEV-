@@ -17,6 +17,7 @@ body {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
+	overflow-x: hidden;
 	padding: 88px 32px 96px;
 	background-color: var(--cream);
 }
@@ -98,6 +99,7 @@ body {
 .gallery-item {
 	position: relative;
 	min-height: 220px;
+	height: 100%;
 	margin: 0;
 	overflow: hidden;
 	border-radius: 13px;
@@ -194,7 +196,9 @@ body {
 }
 
 .customer-card > img {
+	width: 100%;
 	height: 220px;
+	object-fit: cover;
 }
 
 .customer-card:hover > img {

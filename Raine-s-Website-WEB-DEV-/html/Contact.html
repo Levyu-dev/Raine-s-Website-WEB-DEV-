@@ -1,41 +1,98 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
-        <title>Contact Us</title>
-        <link rel="stylesheet" href="">
         <title>Contact Us - Raine's Cakes and Pastries</title>
+        <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet" href="../css/nav.css">
     </head>
 
     <body>
         <header>
 
             <div class="top-container">
-                <img src="logo.jpg" alt="Raine's Cakes and Patries logo" id="logo">
-
+                <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
                 <nav id="nav-bar">
-                    <a href="home.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="Products.html">Products</a>
                     <a href="gallery.html">Gallery</a>
-                    <a href="Contact.html">Contact Us</a>
+                    <a href="Contact.html" aria-current="page">Contact Us</a>
                 </nav>
             </div>
 
         </header>
 
-        <div class="sidebar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact Us</a>
+        <aside class="sidebar" aria-label="User access panel">
+    <div class="sidebar-brand">
+        <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
+        <div>
+            <strong>Raine's</strong>
+            <small>Welcome back!</small>
         </div>
+    </div>
 
-        <div class="form">
-            <div>
+    <section class="sidebar-section" aria-labelledby="profile-section">
+        <h2 class="sidebar-section-title" id="profile-section">PROFILE</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">👤</span>My Profile</button>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">♡</span>Favorites</button>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="raine-section">
+        <h2 class="sidebar-section-title" id="raine-section">RAINE'S</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">🛍</span>My Orders</button>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">📍</span>Our Branches</button>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="support-section">
+        <h2 class="sidebar-section-title" id="support-section">SUPPORT</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">⚙</span>Settings</button>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">?</span>Help &amp; Support</button>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="account-section">
+        <h2 class="sidebar-section-title" id="account-section">ACCOUNT</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">↪</span>Log Out</button>
+    </section>
+    <div class="sidebar-editorial" aria-hidden="true">BAKED WITH LOVE</div>
+    <div class="sidebar-branding" aria-hidden="true">
+        <span></span>
+        <p>MADE FOR SWEET<br>MOMENTS.</p>
+    </div>
+</aside>
+
+        <main class="contact-main">
+            <section class="contact-intro">
+                <p class="contact-kicker">GET IN TOUCH</p>
                 <h1>Contact Us</h1>
-                <p>If you have any questions or feedback, feel free to reach out to us!</p>
-                
+                <p>We'd love to hear from you. Whether you have a question, feedback, or simply want to share your experience at Raine's, send us a message.</p>
+            </section>
+
+            <div class="contact-grid">
+                <aside class="contact-details" aria-label="Contact information">
+                    <p class="contact-kicker">LET'S TALK</p>
+                    <h2>A warm welcome<br>is always waiting.</h2>
+
+                    <section>
+                        <h3>VISIT US</h3>
+                        <p>Infante St., Molo</p>
+                        <p>Lopez Jaena St., Jaro</p>
+                    </section>
+
+                    <section>
+                        <h3>WHAT WE'D LOVE TO HEAR</h3>
+                        <p>Questions</p>
+                        <p>Feedback</p>
+                        <p>Suggestions</p>
+                        <p>Your Raine's experience</p>
+                    </section>
+
+                    <section class="contact-note">
+                        <h3>MADE WITH LOVE</h3>
+                        <p>Every message helps us make Raine's a little better.</p>
+                    </section>
+                </aside>
+
+                <section class="contact-form-card">
                 <form>
                         <div class="form-row">
                             <div class="form-group">
@@ -100,10 +157,12 @@
                     <input type="reset" value="Reset">
                     
                 </form>
+                </section>
             </div>
-
-        </div>
+        </main>
 
     </body>
 
 </html>
+
+
