@@ -1,0 +1,320 @@
+/* About page palette and editorial layout */
+:root {
+    --about-pink: #F599C6;
+    --about-cream: #FFEED6;
+    --about-dark-gray: #4A4A4A;
+    --about-white: #FFFFFF;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+	position: relative;
+    background-color: var(--about-cream);
+    color: var(--about-dark-gray);
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.about-editorial {
+    position: absolute;
+    z-index: 1;
+    color: var(--about-pink);
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 700;
+    opacity: 0.8;
+    pointer-events: none;
+    text-align: center;
+}
+
+.about-editorial-left {
+    top: 28%;
+    left: calc(var(--sidebar-width) + 2px);
+}
+
+.about-editorial-right {
+    top: 48%;
+    right: 2px;
+}
+
+.editorial-phrase {
+    display: block;
+    padding: 0 10px;
+    border-left: 1px solid var(--about-pink);
+    border-right: 1px solid var(--about-pink);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.editorial-phrase-top {
+    transform-origin: left center;
+    transform: rotate(-90deg);
+}
+
+.about-editorial-right .editorial-phrase-top {
+    transform-origin: right center;
+    transform: rotate(90deg);
+}
+
+.editorial-phrase-bottom {
+    margin-top: 8rem;
+    color: var(--about-dark-gray);
+    font-size: 9px;
+    transform-origin: left center;
+    transform: rotate(-90deg);
+}
+
+.about-editorial-right .editorial-phrase-bottom {
+    transform-origin: right center;
+    transform: rotate(90deg);
+}
+
+.editorial-mark {
+    display: block;
+    margin-top: 3.5rem;
+    color: var(--about-pink);
+    font-size: 18px;
+}
+
+.main-container {
+    box-sizing: border-box;
+    width: calc(100% - var(--sidebar-width));
+    min-height: calc(100vh - 76px);
+    margin-left: var(--sidebar-width);
+    padding: 54px clamp(32px, 5vw, 72px) 64px;
+    background-color: var(--about-cream);
+    text-align: center;
+}
+
+.main-container::before {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--about-pink);
+    content: "ABOUT RAINE'S";
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.main-container h1 {
+    margin: 0;
+    color: var(--about-dark-gray);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 0;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.main-container h1::before {
+    display: block;
+    content: "Our Story";
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.main-container h1::after {
+    display: block;
+    max-width: 520px;
+    margin: 18px auto 0;
+    color: var(--about-dark-gray);
+    content: "Get to know the story behind Raine's Cakes and Pastries.";
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.main-container::after {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 28px auto 0;
+    border-radius: 2px;
+    background-color: var(--about-pink);
+    content: "";
+}
+
+.story-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(150px, 0.28fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(28px, 5vw, 72px);
+    width: min(100%, 1100px);
+    margin: 42px auto 0;
+    padding: clamp(32px, 5vw, 64px);
+    overflow: hidden;
+    border: 1px solid var(--about-pink);
+    border-radius: 20px;
+    background-color: var(--about-white);
+    box-shadow: 0 8px 20px rgba(74, 74, 74, 0.1);
+    text-align: left;
+}
+
+.story-layout::before {
+    position: absolute;
+    top: 28px;
+    bottom: 28px;
+    left: 0;
+    width: 4px;
+    border-radius: 0 3px 3px 0;
+    background-color: var(--about-pink);
+    content: "";
+}
+
+.story-layout > * {
+    position: relative;
+    z-index: 1;
+}
+
+.story-aside {
+    padding-top: 4px;
+    border-top: 1px solid var(--about-pink);
+    color: var(--about-pink);
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+}
+
+.story-aside span,
+.story-aside strong {
+    display: block;
+}
+
+.story-aside strong {
+    margin-top: 8px;
+    color: var(--about-pink);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+}
+
+.story-copy p {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 0 22px;
+    color: var(--about-dark-gray);
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    text-align: left;
+}
+
+.story-copy p:first-of-type {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid var(--about-pink);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+#text-wrap {
+    display: block;
+    width: 132px;
+    height: 132px;
+    margin: 28px auto 0;
+    border: 6px solid var(--about-white);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 18px rgba(74, 74, 74, 0.14);
+}
+
+footer {
+    box-sizing: border-box;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    padding: 26px 32px 30px;
+    border-top: 1px solid var(--about-pink);
+    background-color: #FFFFFF;
+    color: var(--about-dark-gray);
+    font-family: "Poppins", Arial, sans-serif;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px auto;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .about-editorial {
+        display: none;
+    }
+
+    .main-container {
+        padding: 48px 24px 56px;
+    }
+
+    .story-layout {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 28px;
+        padding: 32px;
+    }
+
+    .story-copy p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .story-copy p:first-of-type {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    .main-container,
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-container {
+        display: block;
+        padding: 42px 18px 48px;
+        text-align: center;
+    }
+
+    .story-layout {
+        display: block;
+        width: 100%;
+        margin-top: 32px;
+    }
+
+    .story-copy p,
+    .story-copy p:first-of-type {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        padding-left: 14px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .main-container h1::after {
+        font-size: 14px;
+    }
+
+    .story-aside {
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    #text-wrap {
+        width: 112px;
+        height: 112px;
+        margin: 22px auto 0;
+    }
+
+    footer {
+        padding: 22px 18px 26px;
+    }
+}

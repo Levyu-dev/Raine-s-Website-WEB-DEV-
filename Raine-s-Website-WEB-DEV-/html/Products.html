@@ -1,31 +1,72 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="eng">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/nav.css">
 
 </head>
 
 <body>
     <header>
         <div class="top-container" id="logo">
-                    <img src="" alt="Raine's Cakes and Patries logo">
+                    <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
 
                     <nav id="nav-bar">
-                        <a href="Home.html">Home</a>
-                        <a href="About.html">About Us</a>
-                        <a href="Products.html">Products</a>
-                        <a href="Gallery.html">Gallery</a>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="Products.html" aria-current="page">Products</a>
+                        <a href="gallery.html">Gallery</a>
                         <a href="Contact.html">Contact Us</a>
                     </nav>
         </div>
 
+        <aside class="sidebar" aria-label="User access panel">
+    <div class="sidebar-brand">
+        <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
+        <div>
+            <strong>Raine's</strong>
+            <small>Welcome back!</small>
+        </div>
+    </div>
+
+    <section class="sidebar-section" aria-labelledby="profile-section">
+        <h2 class="sidebar-section-title" id="profile-section">PROFILE</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">👤</span>My Profile</button>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">♡</span>Favorites</button>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="raine-section">
+        <h2 class="sidebar-section-title" id="raine-section">RAINE'S</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">🛍</span>My Orders</button>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">📍</span>Our Branches</button>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="support-section">
+        <h2 class="sidebar-section-title" id="support-section">SUPPORT</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">⚙</span>Settings</button>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">?</span>Help &amp; Support</button>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="account-section">
+        <h2 class="sidebar-section-title" id="account-section">ACCOUNT</h2>
+        <button type="button"><span class="sidebar-icon" aria-hidden="true">↪</span>Log Out</button>
+    </section>
+
+    <div class="sidebar-editorial" aria-hidden="true">BAKED WITH LOVE</div>
+    <div class="sidebar-branding" aria-hidden="true">
+        <span></span>
+        <p>MADE FOR SWEET<br>MOMENTS.</p>
+    </div>
+</aside>
+
+        <main class="products-main">
         <div class="menu-header" id="content">
             <h1>Products</h1>
-            <p>Discover our wide range of delicious cakes, pastries, and many more. Csrafted with love and care to satisfy your sweet cravings!</p>
+            <p>Discover our wide range of delicious cakes, pastries, and many more. Crafted with love and care to satisfy your sweet cravings!</p>
         </div>
 
         <div class="menu-content">
@@ -34,53 +75,51 @@
 
             <div class="product-category" id="coffee">
 
-                <h3>COFFEE</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>COFFEE</h3>
+                        <p class="category-description">Handcrafted coffee favorites for every kind of craving.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
 
-                        <img src="" alt="Sea Salt Latte">
+                        <img src="../assets/productsss/sea%20salt%20latte.jpg" alt="Sea Salt Latte">
                         <h4>Sea Salt Latte</h4>
                         <p>₱190</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Salted Caramel">
+                        <img src="../assets/productsss/salted%20caramel.jpg" alt="Salted Caramel">
                         <h4>Salted Caramel</h4>
                         <p>₱170</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Biscoff Latte">
+                        <img src="../assets/productsss/biscoff%20latte.jpg" alt="Biscoff Latte">
                         <h4>Biscoff Latte</h4>
                         <p>₱190</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Caramel Latte">
                         <h4>Caramel Latte</h4>
                         <p>₱170</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Butterscotch">
                         <h4>Butterscotch</h4>
                         <p>₱170</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Spanish Latte">
                         <h4>Spanish Latte</h4>
                         <p>₱170</p> 
 
@@ -94,345 +133,369 @@
 
              <div class="product-category" id="non-coffee">
 
-                <h3>NON-COFFEE</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>NON-COFFEE</h3>
+                        <p class="category-description">Sweet, creamy sips made for slow afternoons.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
-
-                        <img src="" alt="Pink Drink">
+                        <img src="../assets/productsss/pink%20drink.jpg" alt="Pink Drink">
                         <h4>Pink Drink</h4>
                         <p>₱130</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Biscoff Milk">
+                        <img src="../assets/productsss/biscoff%20milk.jpg" alt="Biscoff Milk">
                         <h4>Biscoff Milk</h4>
                         <p>₱170</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Strawberry Milk">
+                        <img src="../assets/productsss/strawberry%20milk.jpg" alt="Strawberry Milk">
                         <h4>Strawberry Milk</h4>
                         <p>₱140</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Nutella Milk">
                         <h4>Nutella Milk</h4>
                         <p>₱170</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Hot Chocolate">
                         <h4>Hot Chocolate</h4>
                         <p>₱130</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Classic MilkTea">
                         <h4>Classic MilkTea</h4>
                         <p>₱100</p> 
 
                     </div>
+
+                </div>
+
+            </div>
                 
                 <!--PASTA-->
 
              <div class="product-category" id="pasta">
 
-                <h3>PASTA</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>PASTA</h3>
+                        <p class="category-description">Comforting plates prepared for a satisfying meal.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
-
-                        <img src="" alt="Creamy Bacon Carbonara">
+                        <img src="../assets/productsss/creamy%20bacon%20carbonara.jpg" alt="Creamy Bacon Carbonara">
                         <h4>Creamy Bacon Carbonara</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chicken Pesto">
+                        <img src="../assets/productsss/chicken%20pesto.jpg" alt="Chicken Pesto">
                         <h4>Chicken Pesto</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Bolognese">
+                        <img src="../assets/productsss/bolognese.jpg" alt="Bolognese">
                         <h4>Bolognese</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chicken Alfredo">
                         <h4>Chicken Alfredo</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Aglio Olio">
                         <h4>Aglio Olio</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Pinoy Style">
                         <h4>Pinoy Style</h4>
                         <p>₱200</p> 
 
                     </div>
+
+                </div>
+
+            </div>
                 
                 <!--SANDWICHES/BURGERS-->
 
              <div class="product-category" id="sandwiches/burgers">
 
-                <h3>SANDWICHES/BURGERS</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>SANDWICHES/BURGERS</h3>
+                        <p class="category-description">Hearty café classics made for an easy bite.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
-
-                        <img src="" alt="Caramelized Onion Burger">
+                        <img src="../assets/productsss/caramelized%20onion%20burger.jpg" alt="Caramelized Onion Burger">
                         <h4>Caramelized Onion Burger</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Clubhouse">
+                        <img src="../assets/productsss/clubhouse.jpg" alt="Clubhouse">
                         <h4>Clubhouse</h4>
                         <p>₱250</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Ham and Egg">
+                        <img src="../assets/productsss/ham%20and%20egg.jpg" alt="Ham and Egg">
                         <h4>Ham and Egg</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Grilled Cheese">
                         <h4>Grilled Cheese</h4>
                         <p>₱180</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Barbeque Burger">
                         <h4>Barbeque Burger</h4>
                         <p>₱200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Cheese Burger">
                         <h4>Cheese Burger</h4>
                         <p>₱180</p> 
 
                     </div>    
 
+                </div>
+
+            </div>
+
                 <!--PASTRIES-->
 
              <div class="product-category" id="pastries">
 
-                <h3>PASTRIES</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>PASTRIES</h3>
+                        <p class="category-description">Freshly baked treats to pair with your favorite drink.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
-
-                        <img src="" alt="Muffin">
+                        <img src="../assets/productsss/muffin.jpg" alt="Muffin">
                         <h4>Muffin</h4>
                         <p>₱75</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Cinnamon Roll">
+                        <img src="../assets/productsss/cinammon%20roll.jpg" alt="Cinnamon Roll">
                         <h4>Cinnamon Roll</h4>
                         <p>₱105</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chocolate Crinkle">
+                        <img src="../assets/productsss/chocolate%20crinkle.jpg" alt="Chocolate Crinkle">
                         <h4>Chocolate Crinkle</h4>
                         <p>₱20</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chocolate Brownie">
                         <h4>Chocolate Brownie</h4>
                         <p>₱75</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Classic Ensaymada">
                         <h4>Classic Ensaymada</h4>
                         <p>₱50  </p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Cheese Roll">
                         <h4>Cheese Roll</h4>
                         <p>₱50</p> 
 
                     </div> 
 
+                </div>
+
+            </div>
+
                 <!--CAKES-->
 
              <div class="product-category" id="cakes">
 
-                <h3>CAKES</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>CAKES</h3>
+                        <p class="category-description">Celebration-ready favorites for every sweet occasion.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
-
-                        <img src="" alt="Ube de Leche">
+                        <img src="../assets/productsss/ube%20de%20leche.jpg" alt="Ube de Leche">
                         <h4>Ube de Leche</h4>
                         <p>₱1300</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Yema Cake">
+                        <img src="../assets/productsss/yema%20cake.jpg" alt="Yema Cake">
                         <h4>Yema Cake</h4>
                         <p>₱800</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Carrot Cake">
+                        <img src="../assets/productsss/carrot%20cake.jpg" alt="Carrot Cake">
                         <h4>Carrot Cake</h4>
                         <p>₱1350</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Red Velvet Cake">
                         <h4>Red Velvet Cake</h4>
                         <p>₱1200</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Strawberry Cheesecake">
                         <h4>Strawberry Cheesecake</h4>
                         <p>₱1400</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chocolate Cake">
                         <h4>Chocolate Cake</h4>
                         <p>₱1350</p> 
 
                     </div>
 
+                </div>
+
+            </div>
+
                 <!--RICE MEALS-->
 
              <div class="product-category" id="rice meals">
 
-                <h3>RICE MEALS</h3>
+                <div class="category-header">
+                    <div>
+                        <h3>RICE MEALS</h3>
+                        <p class="category-description">Familiar, filling plates for a proper café meal.</p>
+                    </div>
+                    <button class="more-products" type="button">view more <span aria-hidden="true">→</span></button>
+                </div>
 
                 <div class="product-wheel">
 
                     <div class="product-card">
-
-                        <img src="" alt="Garlic Pepper Beef">
+                        <img src="../assets/productsss/garlic%20pepper%20beef.jpg" alt="Garlic Pepper Beef">
                         <h4>Garlic Pepper Beef</h4>
                         <p>₱180</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chicken Ala King">
+                        <img src="../assets/productsss/chicken%20ala%20king.jpg" alt="Chicken Ala King">
                         <h4>Chicken Ala King</h4>
                         <p>₱180</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chicken Katsu">
+                        <img src="../assets/productsss/chicken%20katsu.jpg" alt="Chicken Katsu">
                         <h4>Chicken Katsu</h4>
                         <p>₱170</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Burger Steak">
                         <h4>Burger Steak</h4>
                         <p>₱150</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Pork Adobo">
                         <h4>Pork Adobo</h4>
                         <p>₱180</p> 
 
                     </div>
 
                     <div class="product-card">
-
-                        <img src="" alt="Chicken Teriyaki">
                         <h4>Chicken Teriyaki</h4>
                         <p>₱150</p> 
 
                     </div>
 
-                <button>order now!</button>
+                </div>
+
+            </div>
+
+                <div class="order-now-anchor">
+                    <button class="order-now-cta" type="button">order now!</button>
+                </div>
 
         </div>
+        </main>
 
 
     </header>
+<script>
+    const orderNowAnchor = document.querySelector('.order-now-anchor');
+    const orderNowButton = document.querySelector('.order-now-cta');
+
+    if (orderNowAnchor && orderNowButton) {
+        const orderNowObserver = new IntersectionObserver(([entry]) => {
+            orderNowButton.classList.toggle('is-floating', !entry.isIntersecting);
+        });
+
+        orderNowObserver.observe(orderNowAnchor);
+    }
+</script>
+
 </body>
 
 
 </html>
+
+
