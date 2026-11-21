@@ -204,9 +204,10 @@ body {
 }
 
 .product-card {
+	position: relative;
 	display: flex;
 	width: calc((100% - 2.5rem) / 3);
-	height: 310px;
+	height: auto;
 	max-width: 300px;
 	box-sizing: border-box;
 	flex: 0 1 calc((100% - 2.5rem) / 3);
@@ -254,23 +255,6 @@ body {
 	font-family: Arial, sans-serif;
 	font-size: 0.98rem;
 	font-weight: 700;
-}
-
-.product-card::after {
-	margin: auto 0.95rem 0.8rem;
-	color: var(--pink);
-	content: "\2661 Like";
-	font-family: Arial, sans-serif;
-	font-size: 0.78rem;
-	font-weight: 700;
-	text-align: right;
-	transition: color 180ms ease, transform 180ms ease;
-}
-
-.product-card:hover::after {
-	color: var(--dark-gray);
-	content: "\2665 Like";
-	transform: scale(1.04);
 }
 
 .menu-content button {
@@ -362,7 +346,8 @@ body {
 
 	.product-card {
 		width: 250px;
-		height: 300px;
+		height: auto;
+		min-height: 300px;
 		flex: 0 0 250px;
 	}
 }
@@ -404,11 +389,12 @@ body {
 		padding-right: 0.5rem;
 	}
 
-	.product-card {
-		width: 250px;
-		height: 300px;
-		flex-basis: 250px;
-	}
+.product-card {
+	width: 250px;
+	flex-basis: 250px;
+	height: auto;
+	min-height: 310px;
+}
 }
 
 @media (max-width: 650px) {
@@ -439,4 +425,36 @@ body {
 		bottom: 16px;
 		right: auto;
 	}
+}
+
+.product-category.expanded .product-card:nth-child(n + 4) {
+	display: flex;
+}
+.product-category.expanded .product-wheel {
+	flex-wrap: wrap;
+}
+
+/* ===== Heart button (top-right corner of each card) ===== */
+.menu-content .like-btn {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	box-shadow: none;
+	color: var(--pink);
+	font-size: 1.6rem;
+	line-height: 1;
+	cursor: pointer;
+	transition: transform 180ms ease;
+}
+
+.menu-content .like-btn:hover {
+	background: none;
+	color: var(--pink);
+	box-shadow: none;
+	transform: scale(1.2);
 }

@@ -431,3 +431,7 @@ body {
 		padding: 14px;
 	}
 }
+
+.customer-card > img {
+	cursor: pointer;
+}
