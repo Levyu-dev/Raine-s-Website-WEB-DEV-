@@ -32,7 +32,7 @@ body {
 
 .category-nav {
 	position: sticky;
-	top: 76px;
+	top: var(--nav-height);
 	z-index: 25;
 	display: flex;
 	width: min(100%, 1440px);
@@ -69,6 +69,11 @@ body {
 	background: var(--rose);
 	color: #FFFFFF;
 	outline: none;
+}
+
+.category-nav a[aria-current="location"] {
+	background: var(--rose);
+	color: #FFFFFF;
 }
 
 .menu-header::before {
@@ -128,6 +133,7 @@ body {
 	width: 100%;
 	margin: 0 0 3.5rem;
 	counter-increment: category;
+	scroll-margin-top: calc(var(--nav-height) + 52px);
 }
 
 .category-header {
@@ -460,10 +466,6 @@ body {
 		margin-left: 0;
 		padding-right: 16px;
 		padding-left: 16px;
-	}
-
-	.category-nav {
-		top: 68px;
 	}
 
 	.menu-header {

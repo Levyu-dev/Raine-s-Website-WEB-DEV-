@@ -2,6 +2,7 @@
 <html>
 
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Raine's Cakes and Patries</title>
         <link rel="stylesheet" href="../css/about.css">
         <link rel="stylesheet" href="../css/nav.css">
@@ -13,7 +14,11 @@
             <div class="top-container" id="logo">
                 <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
 
-                <nav id="nav-bar">
+                <button class="mobile-menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <nav id="nav-bar" aria-label="Main navigation">
                     <a href="index.html">Home</a>
                     <a href="about.html" aria-current="page">About Us</a>
                     <a href="Products.html">Products</a>
@@ -24,7 +29,16 @@
         </header>
 
         <!--Sidebar Navigation-->
-        <aside class="sidebar" aria-label="User access panel">
+        <aside class="sidebar" id="site-sidebar" aria-label="User access panel" aria-hidden="false">
+    <button class="sidebar-collapse-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="Collapse sidebar"><span aria-hidden="true">‹</span></button>
+    <nav class="sidebar-site-nav" aria-label="Site navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About Us</a>
+        <a href="Products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="Contact.html">Contact Us</a>
+    </nav>
+
     <div class="sidebar-brand">
         <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
         <div>
@@ -35,25 +49,25 @@
 
     <section class="sidebar-section" aria-labelledby="profile-section">
         <h2 class="sidebar-section-title" id="profile-section">PROFILE</h2>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">👤</span>My Profile</button>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">♡</span>Favorites</button>
+        <button type="button" data-tooltip="My Profile" aria-label="My Profile"><img class="sidebar-icon" src="../assets/sidebar/profile.svg" alt="" aria-hidden="true"><span class="sidebar-label">My Profile</span></button>
+        <button type="button" data-tooltip="Favorites" aria-label="Favorites"><img class="sidebar-icon" src="../assets/sidebar/favorites.svg" alt="" aria-hidden="true"><span class="sidebar-label">Favorites</span></button>
     </section>
 
     <section class="sidebar-section" aria-labelledby="raine-section">
         <h2 class="sidebar-section-title" id="raine-section">RAINE'S</h2>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">🛍</span>My Orders</button>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">📍</span>Our Branches</button>
+        <button type="button" data-tooltip="My Orders" aria-label="My Orders"><img class="sidebar-icon" src="../assets/sidebar/orders.svg" alt="" aria-hidden="true"><span class="sidebar-label">My Orders</span></button>
+        <button type="button" data-tooltip="Our Branches" aria-label="Our Branches"><img class="sidebar-icon" src="../assets/sidebar/location.svg" alt="" aria-hidden="true"><span class="sidebar-label">Our Branches</span></button>
     </section>
 
     <section class="sidebar-section" aria-labelledby="support-section">
         <h2 class="sidebar-section-title" id="support-section">SUPPORT</h2>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">⚙</span>Settings</button>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">?</span>Help &amp; Support</button>
+        <button type="button" data-tooltip="Settings" aria-label="Settings"><img class="sidebar-icon" src="../assets/sidebar/settings.svg" alt="" aria-hidden="true"><span class="sidebar-label">Settings</span></button>
+        <button type="button" data-tooltip="Help &amp; Support" aria-label="Help &amp; Support"><img class="sidebar-icon" src="../assets/sidebar/help.svg" alt="" aria-hidden="true"><span class="sidebar-label">Help &amp; Support</span></button>
     </section>
 
     <section class="sidebar-section" aria-labelledby="account-section">
         <h2 class="sidebar-section-title" id="account-section">ACCOUNT</h2>
-        <button type="button"><span class="sidebar-icon" aria-hidden="true">↪</span>Log Out</button>
+        <button type="button" data-tooltip="Log Out" aria-label="Log Out"><img class="sidebar-icon" src="../assets/sidebar/logout.svg" alt="" aria-hidden="true"><span class="sidebar-label">Log Out</span></button>
     </section>
     <div class="sidebar-editorial" aria-hidden="true">BAKED WITH LOVE</div>
     <div class="sidebar-branding" aria-hidden="true">
@@ -61,6 +75,7 @@
         <p>MADE FOR SWEET<br>MOMENTS.</p>
     </div>
 </aside>
+        <button class="sidebar-backdrop" type="button" aria-label="Close menu" hidden></button>
 
         <div class="about-editorial about-editorial-left" aria-hidden="true">
             <span class="editorial-phrase editorial-phrase-top">BAKED WITH LOVE</span>
@@ -98,6 +113,7 @@
             <p>Phone: +63 960 863 6821 | Facebook: Raine's Cakes and Patries</p>
             <p>&copy; 2025 All rights reserved.</p>
         </footer>
+        <script src="../js/nav.js" defer></script>
     </body>
 
 </html>
