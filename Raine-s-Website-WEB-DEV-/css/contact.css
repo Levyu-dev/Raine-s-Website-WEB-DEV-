@@ -244,3 +244,18 @@ body {
         gap: 0;
     }
 }
+
+/* i added this part */
+
+.form-status {
+	margin: 14px 0 0;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.form-status.error {
+	color: #B9477D;
+}
+.form-status.success {
+	color: #4A4A4A;
+}

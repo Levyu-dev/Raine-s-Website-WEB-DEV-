@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -407,4 +408,88 @@ body .gallery {
     body .gallery {
         margin-left: 0;
     }
+}
+
+
+
+/* ===== Sidebar toggle ===== */
+.top-container > img {
+	margin-right: auto;
+}
+
+.sidebar-toggle {
+	flex: 0 0 auto;
+	width: 40px;
+	height: 40px;
+	margin-right: 14px;
+	border: 1px solid var(--nav-pink);
+	border-radius: 8px;
+	background-color: var(--nav-cream);
+	color: var(--nav-dark-gray);
+	font-size: 20px;
+	cursor: pointer;
+	transition: background-color 180ms ease;
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus-visible {
+	background-color: var(--nav-pink);
+}
+
+.sidebar {
+	transition: transform 250ms ease, visibility 250ms ease;
+}
+
+body.sidebar-collapsed {
+	--sidebar-width: 0px;
+}
+
+body.sidebar-collapsed .sidebar {
+	transform: translateX(-100%);
+	visibility: hidden;
+}
+
+@media (max-width: 650px) {
+	body.sidebar-collapsed .sidebar {
+		display: none;
+	}
+}
+
+/* ===== Info popup (Favorites, Branches, etc.) ===== */
+.info-dialog {
+	width: min(420px, calc(100% - 32px));
+	padding: 24px;
+	border: 1px solid var(--nav-pink);
+	border-radius: 13px;
+	background-color: var(--nav-cream);
+	color: var(--nav-dark-gray);
+	font-family: Arial, sans-serif;
+}
+
+.info-dialog::backdrop {
+	background-color: rgba(74, 74, 74, 0.7);
+}
+
+.info-dialog h2 {
+	margin: 0 0 12px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.info-dialog p {
+	margin: 6px 0;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.info-close {
+	display: block;
+	margin: 0 0 8px auto;
+	border: 0;
+	background: transparent;
+	color: var(--nav-pink);
+	font-size: 26px;
+	line-height: 1;
+	cursor: pointer;
 }
