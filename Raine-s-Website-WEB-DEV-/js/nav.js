@@ -57,7 +57,7 @@
 
     sidebar.querySelector(".sidebar-site-nav").addEventListener("click", event => {
         if (event.target.closest("a")) {
-            setDrawerOpen(false, false);
+            setDrawerOpen(false, true);
         }
     });
 
