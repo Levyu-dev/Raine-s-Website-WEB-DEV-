@@ -1,3 +1,12 @@
+/* Page palette */
+:root {
+    --contact-pink: #F599C6;
+    --contact-cream: #FFEED6;
+    --contact-charcoal: #4A4A4A;
+    --contact-rose: #B9477D;
+    --contact-mocha: #795548;
+}
+
 html,
 body {
     margin: 0;
@@ -16,7 +25,9 @@ body {
     min-height: calc(100vh - 76px);
     margin-left: var(--sidebar-width);
     padding: 58px 32px 72px;
-    background-color: #FFEED6;
+    background:
+        radial-gradient(circle at 82% 12%, rgba(245,153,198,.16), transparent 18rem),
+        #FFEED6;
 }
 
 .contact-intro {
@@ -62,14 +73,15 @@ body {
 .contact-details,
 .contact-form-card {
     box-sizing: border-box;
-    border: 1px solid #F599C6;
-    border-radius: 13px;
+    border: 0;
+    border-radius: 18px;
 }
 
 .contact-details {
     min-height: 100%;
     padding: 32px 28px;
-    background-color: #F599C6;
+    background:
+        linear-gradient(145deg, #C95A91 0%, #F599C6 100%);
     color: #4A4A4A;
 }
 
@@ -195,7 +207,9 @@ body {
 }
 
 .contact-form-card input[type="submit"] {
-    background-color: #F599C6;
+    border-color: var(--contact-rose);
+    background-color: var(--contact-rose);
+    color: #FFFFFF;
 }
 
 .contact-form-card input[type="reset"] {

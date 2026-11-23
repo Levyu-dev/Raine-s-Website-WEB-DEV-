@@ -4,6 +4,8 @@
     --about-cream: #FFEED6;
     --about-dark-gray: #4A4A4A;
     --about-white: #FFFFFF;
+    --about-rose: #B9477D;
+    --about-mocha: #795548;
 }
 
 html,
@@ -87,8 +89,10 @@ body {
     width: calc(100% - var(--sidebar-width));
     min-height: calc(100vh - 76px);
     margin-left: var(--sidebar-width);
-    padding: 54px clamp(32px, 5vw, 72px) 64px;
-    background-color: var(--about-cream);
+    padding: 64px clamp(32px, 5vw, 72px) 72px;
+    background:
+        linear-gradient(135deg, rgba(245,153,198,.12), transparent 26rem),
+        var(--about-cream);
     text-align: center;
 }
 
@@ -142,15 +146,15 @@ body {
 .story-layout {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(150px, 0.28fr) minmax(0, 1fr);
+    grid-template-columns: minmax(180px, 0.32fr) minmax(0, 1fr);
     align-items: start;
     gap: clamp(28px, 5vw, 72px);
     width: min(100%, 1100px);
     margin: 42px auto 0;
     padding: clamp(32px, 5vw, 64px);
     overflow: hidden;
-    border: 1px solid var(--about-pink);
-    border-radius: 20px;
+    border: 0;
+    border-radius: 4px 42px 42px 4px;
     background-color: var(--about-white);
     box-shadow: 0 8px 20px rgba(74, 74, 74, 0.1);
     text-align: left;
@@ -180,6 +184,16 @@ body {
     font-size: 11px;
     letter-spacing: 0.15em;
     line-height: 1.8;
+}
+
+.story-aside .story-photo {
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin-top: 22px;
+    border-radius: 18px 18px 64px 18px;
+    object-fit: cover;
+    box-shadow: 0 12px 24px rgba(74, 74, 74, 0.14);
 }
 
 .story-aside span,
@@ -311,6 +325,12 @@ footer p {
     #text-wrap {
         width: 112px;
         height: 112px;
+        margin: 22px auto 0;
+    }
+
+    .story-aside .story-photo {
+        height: 180px;
+        max-width: 260px;
         margin: 22px auto 0;
     }
 

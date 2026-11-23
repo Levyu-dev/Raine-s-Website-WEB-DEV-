@@ -4,6 +4,8 @@
     --home-cream: #FFEED6;
     --home-dark-gray: #4A4A4A;
     --home-white: #FFFFFF;
+    --home-rose: #B9477D;
+    --home-mocha: #795548;
 }
 
 html,
@@ -23,8 +25,10 @@ body {
     box-sizing: border-box;
     width: calc(100% - var(--sidebar-width));
     margin-left: var(--sidebar-width);
-    padding: 42px 32px 72px;
-    background-color: var(--home-cream);
+    padding: 56px 48px 84px;
+    background:
+        radial-gradient(circle at 86% 12%, rgba(245,153,198,.18), transparent 16rem),
+        var(--home-cream);
 }
 
 .home-hero {
@@ -39,8 +43,9 @@ body {
 
 .hero-copy {
     position: relative;
-    padding: 24px 0 24px 26px;
-    border-left: 3px solid var(--home-pink);
+    max-width: 620px;
+    padding: 26px 0 26px 32px;
+    border-left: 3px solid var(--home-rose);
 }
 
 .hero-copy::before {
@@ -57,7 +62,7 @@ body {
 .hero-kicker,
 .section-kicker {
     margin: 0 0 16px;
-    color: var(--home-pink);
+    color: var(--home-rose);
     font-family: "Poppins", Arial, sans-serif;
     font-size: 12px;
     font-weight: 700;
@@ -68,7 +73,7 @@ body {
     margin: 0;
     color: var(--home-dark-gray);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(2.8rem, 5.5vw, 5.4rem);
+    font-size: clamp(3.2rem, 5.4vw, 5.8rem);
     font-weight: 700;
     line-height: 0.98;
 }
@@ -81,30 +86,39 @@ body {
 }
 
 .home-order-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 28px;
     padding: 14px 26px;
-    border: 1px solid var(--home-pink);
-    border-radius: 7px;
-    background-color: var(--home-pink);
+    border: 1px solid var(--home-rose);
+    border-radius: 999px;
+    background-color: var(--home-rose);
+    color: #FFFFFF;
+    font: 700 13px "Poppins", Arial, sans-serif;
+    letter-spacing: 0.12em;
+    text-decoration: none;
     box-shadow: 0 5px 0 rgba(74, 74, 74, 0.12);
     cursor: pointer;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .home-order-button a {
-    color: var(--home-dark-gray);
+    color: #FFFFFF;
     font: 700 13px "Poppins", Arial, sans-serif;
     letter-spacing: 0.12em;
     text-decoration: none;
 }
 
 .home-order-button:hover {
-    background-color: var(--home-dark-gray);
+    background-color: var(--home-mocha);
+    border-color: var(--home-mocha);
     transform: translateY(-2px);
+    color: #FFFFFF;
 }
 
 .home-order-button:hover a {
-    color: var(--home-cream);
+    color: #FFFFFF;
 }
 
 .hero-note {

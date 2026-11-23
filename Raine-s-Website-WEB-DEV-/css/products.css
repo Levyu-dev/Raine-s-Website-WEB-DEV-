@@ -3,6 +3,8 @@
 	--pink: #F599C6;
 	--cream: #FFEED6;
 	--dark-gray: #4A4A4A;
+	--rose: #B9477D;
+	--mocha: #795548;
 }
 
 body {
@@ -26,6 +28,47 @@ body {
 	margin: 0 auto;
 	padding: 2.5rem 2rem 1.75rem;
 	text-align: center;
+}
+
+.category-nav {
+	position: sticky;
+	top: 76px;
+	z-index: 25;
+	display: flex;
+	width: min(100%, 1440px);
+	box-sizing: border-box;
+	margin: 0 auto 2.5rem;
+	padding: 10px;
+	gap: 8px;
+	overflow-x: auto;
+	border: 1px solid rgba(185, 71, 125, 0.16);
+	border-radius: 999px;
+	background: #FFFFFF;
+	box-shadow: 0 8px 24px rgba(74, 74, 74, 0.07);
+	scrollbar-width: none;
+}
+
+.category-nav::-webkit-scrollbar {
+	display: none;
+}
+
+.category-nav a {
+	flex: 0 0 auto;
+	padding: 10px 16px;
+	border-radius: 999px;
+	color: var(--dark-gray);
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: background-color 180ms ease, color 180ms ease;
+}
+
+.category-nav a:hover,
+.category-nav a:focus-visible {
+	background: var(--rose);
+	color: #FFFFFF;
+	outline: none;
 }
 
 .menu-header::before {
@@ -153,11 +196,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex: 0 0 auto;
-	border: 1px solid var(--pink);
-	border-radius: 0.35rem;
+	border: 1px solid var(--rose);
+	border-radius: 999px;
 	padding: 0.5rem 0.8rem;
-	background-color: var(--pink);
-	color: var(--dark-gray);
+	background-color: var(--rose);
+	color: #FFFFFF;
 	cursor: pointer;
 	font-family: Arial, sans-serif;
 	font-size: 0.72rem;
@@ -417,6 +460,10 @@ body {
 		margin-left: 0;
 		padding-right: 16px;
 		padding-left: 16px;
+	}
+
+	.category-nav {
+		top: 68px;
 	}
 
 	.menu-header {

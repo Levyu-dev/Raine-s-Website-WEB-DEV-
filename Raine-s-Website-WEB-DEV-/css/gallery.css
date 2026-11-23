@@ -3,6 +3,8 @@
 	--pink: #F599C6;
 	--cream: #FFEED6;
 	--dark-gray: #4A4A4A;
+	--rose: #B9477D;
+	--mocha: #795548;
 }
 
 body {
@@ -18,8 +20,10 @@ body {
 	max-width: 1440px;
 	margin: 0 auto;
 	overflow-x: hidden;
-	padding: 88px 32px 96px;
-	background-color: var(--cream);
+	padding: 88px 48px 96px;
+	background:
+		linear-gradient(160deg, rgba(245,153,198,.1), transparent 28rem),
+		var(--cream);
 }
 
 .gallery *,
