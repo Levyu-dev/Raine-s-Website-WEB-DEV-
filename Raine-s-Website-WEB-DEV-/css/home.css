@@ -2,15 +2,15 @@
 /* Home page palette */
 
 :root {
-    --home-pink: #F599C6;
-    --home-cream: #FFEED6;
-    --home-dark-gray: #4A4A4A;
-    --home-white: #FFFFFF;
-    --home-rose: #A94F70;
-    --home-mocha: #795548;
-    --home-blush: #D987AA;
-    --home-ivory: #FFF8F0;
-    --home-muted: #756963;
+    --home-strawberry: #B83250;
+    --home-rose: #E77B91;
+    --home-pink: #F5B8CC;
+    --home-blush: #FCE9EF;
+    --home-peach: #FFF0E9;
+    --home-butter: #F4D68A;
+    --home-berry: #542A3A;
+    --home-white: #FFF9F6;
+    --home-muted: #806773;
 }
 
 /* General page setup */
@@ -24,8 +24,8 @@ body {
 
 body {
     padding-top: var(--nav-height);
-    background-color: var(--home-cream);
-    color: var(--home-dark-gray);
+    background-color: var(--home-peach);
+    color: var(--home-berry);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -39,10 +39,10 @@ body {
     background:
         radial-gradient(
             circle at 10% 5%,
-            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.55),
             transparent 35%
         ),
-        var(--home-cream);
+        var(--home-peach);
 }
 
 /* Hero pink container */
@@ -52,10 +52,10 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 22px;
-    background-color: var(--home-blush);
-    border: 1px solid rgba(169, 79, 112, 0.18);
+    background-color: var(--home-pink);
+    border: 1px solid rgba(184, 50, 80, 0.15);
     border-radius: 30px;
-    box-shadow: 0 12px 30px rgba(121, 85, 72, 0.12);
+    box-shadow: 0 12px 30px rgba(84, 42, 58, 0.10);
 }
 
 /* Hero section */
@@ -76,14 +76,14 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding: 48px;
-    background-color: var(--home-ivory);
+    background-color: var(--home-white);
     border-radius: 24px 10px 24px 10px;
 }
 
 .hero-kicker,
-.intro-kicker,
-.feature-label {
-    color: var(--home-rose);
+.section-kicker,
+.feature-number {
+    color: var(--home-strawberry);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -91,14 +91,14 @@ body {
 
 .hero-copy h1 {
     margin: 18px 0;
-    color: var(--home-dark-gray);
+    color: var(--home-berry);
     font-family: 'Playfair Display', serif;
     font-size: clamp(36px, 4vw, 58px);
     font-weight: 700;
     line-height: 1.12;
 }
 
-.hero-copy p {
+.hero-copy .hero-description {
     max-width: 470px;
     margin: 0 0 25px;
     color: var(--home-muted);
@@ -108,11 +108,11 @@ body {
 
 /* Hero button */
 
-.hero-button {
+.home-order-button {
     display: inline-block;
     padding: 14px 23px;
-    background-color: var(--home-rose);
-    border: 1px solid var(--home-rose);
+    background-color: var(--home-strawberry);
+    border: 1px solid var(--home-strawberry);
     border-radius: 8px;
     color: var(--home-white);
     font-size: 12px;
@@ -122,18 +122,24 @@ body {
     transition: 0.25s ease;
 }
 
-.hero-button:hover {
-    background-color: var(--home-mocha);
-    border-color: var(--home-mocha);
+.home-order-button:hover {
+    background-color: var(--home-berry);
+    border-color: var(--home-berry);
     transform: translateY(-3px);
 }
 
-.hero-note {
-    margin-top: 28px;
+/* Hero note */
+
+.hero-copy .hero-note {
+    margin: 28px 0 0;
     color: var(--home-muted);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 1.5px;
+}
+
+.hero-note span {
+    color: var(--home-strawberry);
 }
 
 /* Hero image */
@@ -143,7 +149,7 @@ body {
     min-height: 440px;
     overflow: hidden;
     border-radius: 10px 24px 10px 24px;
-    box-shadow: 0 8px 20px rgba(74, 74, 74, 0.12);
+    box-shadow: 0 8px 20px rgba(84, 42, 58, 0.12);
 }
 
 .hero-image-frame img {
@@ -154,14 +160,14 @@ body {
     object-fit: cover;
 }
 
-.hero-image-badge {
+.hero-image-frame span {
     position: absolute;
     right: 20px;
     bottom: 20px;
     padding: 12px 18px;
-    background-color: var(--home-ivory);
+    background-color: var(--home-white);
     border-radius: 8px;
-    color: var(--home-rose);
+    color: var(--home-strawberry);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -175,10 +181,10 @@ body {
     box-sizing: border-box;
     margin: 65px auto;
     padding: 38px 30px;
-    background-color: var(--home-ivory);
-    border: 1px solid rgba(169, 79, 112, 0.25);
+    background-color: var(--home-blush);
+    border: 1px solid rgba(184, 50, 80, 0.12);
     border-radius: 26px;
-    box-shadow: 0 8px 22px rgba(121, 85, 72, 0.08);
+    box-shadow: 0 8px 22px rgba(84, 42, 58, 0.07);
 }
 
 /* Sweet welcome content */
@@ -191,13 +197,13 @@ body {
 
 .home-introduction h2 {
     margin: 12px 0 15px;
-    color: var(--home-dark-gray);
+    color: var(--home-berry);
     font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 3vw, 40px);
     line-height: 1.2;
 }
 
-.home-introduction p {
+.home-introduction .introduction-description {
     margin: 0;
     color: var(--home-muted);
     font-size: 14px;
@@ -221,11 +227,19 @@ body {
     position: relative;
     padding: 30px 28px;
     overflow: hidden;
-    background-color: var(--home-ivory);
-    border: 1px solid rgba(169, 79, 112, 0.16);
+    background-color: var(--home-white);
+    border: 1px solid rgba(184, 50, 80, 0.12);
     border-radius: 18px;
-    box-shadow: 0 7px 18px rgba(121, 85, 72, 0.07);
+    box-shadow: 0 7px 18px rgba(84, 42, 58, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-block:nth-child(2) {
+    background-color: var(--home-butter);
+}
+
+.feature-block:nth-child(3) {
+    background-color: var(--home-pink);
 }
 
 .feature-block::before {
@@ -235,25 +249,28 @@ body {
     left: 0;
     width: 100%;
     height: 5px;
-    background-color: var(--home-blush);
+    background-color: var(--home-strawberry);
+}
+
+.feature-block:nth-child(2)::before {
+    background-color: var(--home-berry);
 }
 
 .feature-block:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(121, 85, 72, 0.12);
+    box-shadow: 0 12px 24px rgba(84, 42, 58, 0.12);
 }
 
 .feature-number {
     display: block;
     margin-bottom: 25px;
-    color: var(--home-rose);
     font-family: 'Playfair Display', serif;
     font-size: 30px;
 }
 
-.feature-block h3 {
+.feature-block h2 {
     margin: 12px 0;
-    color: var(--home-dark-gray);
+    color: var(--home-berry);
     font-family: 'Playfair Display', serif;
     font-size: 24px;
 }
@@ -267,7 +284,7 @@ body {
 
 .feature-link {
     display: inline-block;
-    color: var(--home-rose);
+    color: var(--home-strawberry);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -276,7 +293,7 @@ body {
 }
 
 .feature-link:hover {
-    color: var(--home-mocha);
+    color: var(--home-berry);
 }
 
 /* Homepage footer */
@@ -286,8 +303,8 @@ body {
     box-sizing: border-box;
     margin-left: var(--sidebar-width);
     padding: 45px 48px 20px;
-    background-color: var(--home-mocha);
-    color: var(--home-ivory);
+    background-color: var(--home-berry);
+    color: var(--home-white);
 }
 
 .footer-content {
@@ -300,13 +317,14 @@ body {
 
 .footer-brand h2 {
     margin: 0 0 10px;
+    color: var(--home-white);
     font-family: 'Playfair Display', serif;
     font-size: 25px;
 }
 
 .footer-brand p {
     margin: 0;
-    color: rgba(255, 248, 240, 0.75);
+    color: rgba(255, 249, 246, 0.75);
     font-size: 13px;
 }
 
@@ -318,18 +336,18 @@ body {
 
 .footer-details p {
     margin: 0;
-    color: rgba(255, 248, 240, 0.85);
+    color: rgba(255, 249, 246, 0.85);
     font-size: 12px;
     line-height: 2;
 }
 
 .footer-details strong {
-    color: var(--home-ivory);
+    color: var(--home-white);
     font-size: 13px;
 }
 
 .footer-details a {
-    color: var(--home-ivory);
+    color: var(--home-butter);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -338,12 +356,12 @@ body {
     grid-column: 1 / -1;
     margin-top: 25px;
     padding-top: 18px;
-    border-top: 1px solid rgba(255, 248, 240, 0.2);
+    border-top: 1px solid rgba(255, 249, 246, 0.2);
 }
 
 .footer-bottom p {
     margin: 0;
-    color: rgba(255, 248, 240, 0.7);
+    color: rgba(255, 249, 246, 0.7);
     font-size: 11px;
 }
 
@@ -437,7 +455,7 @@ body {
         font-size: 36px;
     }
 
-    .hero-copy p {
+    .hero-copy .hero-description {
         font-size: 13px;
     }
 
@@ -459,7 +477,7 @@ body {
         font-size: 29px;
     }
 
-    .home-introduction p {
+    .home-introduction .introduction-description {
         font-size: 13px;
     }
 

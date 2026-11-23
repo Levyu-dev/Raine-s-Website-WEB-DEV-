@@ -1,12 +1,18 @@
-﻿/* Shared Raine's navigation */
+﻿
+/* Shared Raine's navigation */
+
 :root {
     --nav-white: #FFFFFF;
     --nav-pink: #F599C6;
     --nav-cream: #FFEED6;
     --nav-dark-gray: #4A4A4A;
-    --nav-rose: #B9477D;
-    --nav-blush: #FCE0EC;
+    --nav-rose: #A94F70;
+    --nav-blush: #FCE8F1;
     --nav-mocha: #795548;
+
+    --nav-top-bg: #FCE8F1;
+    --nav-sidebar-bg: #F8D5E5;
+
     --sidebar-width: 220px;
     --nav-height: 76px;
 }
@@ -47,8 +53,8 @@ body {
     box-sizing: border-box;
     margin-left: 0;
     padding: 10px 32px;
-    background: var(--nav-cream);
-    border-bottom: 1px solid rgba(185, 71, 125, 0.18);
+    background: var(--nav-top-bg);
+    border-bottom: 1px solid rgba(169, 79, 112, 0.18);
     box-shadow: 0 5px 22px rgba(74, 74, 74, 0.06);
     color: var(--nav-dark-gray);
     font-family: Georgia, "Times New Roman", serif;
@@ -118,6 +124,8 @@ body {
     display: none;
 }
 
+/* Sidebar */
+
 .sidebar {
     position: fixed;
     z-index: 20;
@@ -130,10 +138,10 @@ body {
     flex-direction: column;
     padding: 16px 14px;
     overflow-y: auto;
-    scrollbar-color: rgba(185, 71, 125, 0.4) transparent;
+    scrollbar-color: rgba(169, 79, 112, 0.4) transparent;
     scrollbar-width: thin;
-    background: var(--nav-cream);
-    border-right: 1px solid rgba(185, 71, 125, 0.16);
+    background: var(--nav-sidebar-bg);
+    border-right: 1px solid rgba(169, 79, 112, 0.16);
     box-shadow: 5px 0 24px rgba(74, 74, 74, 0.07);
     transition: width 220ms ease, transform 220ms ease, padding 220ms ease;
 }
@@ -171,7 +179,7 @@ body {
     box-sizing: border-box;
     margin-bottom: 18px;
     padding: 8px 10px;
-    border: 1px solid rgba(185, 71, 125, 0.2);
+    border: 1px solid rgba(169, 79, 112, 0.2);
     border-radius: 12px;
     background-color: #FFF8F0;
 }
@@ -186,7 +194,7 @@ body {
 
 .sidebar::-webkit-scrollbar-thumb {
     border-radius: 999px;
-    background: rgba(185, 71, 125, 0.4);
+    background: rgba(169, 79, 112, 0.4);
 }
 
 .sidebar-brand img {
@@ -220,13 +228,13 @@ body {
 
 .sidebar-section + .sidebar-section {
     padding-top: 12px;
-    border-top: 1px solid rgba(185, 71, 125, 0.2);
+    border-top: 1px solid rgba(169, 79, 112, 0.2);
 }
 
 .sidebar-editorial {
     margin-top: auto;
     padding: 14px 0 10px;
-    color: var(--nav-pink);
+    color: var(--nav-rose);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 10px;
     font-weight: 700;
@@ -237,7 +245,7 @@ body {
 .sidebar-branding {
     margin-top: 0;
     padding-top: 14px;
-    border-top: 1px solid rgba(185, 71, 125, 0.2);
+    border-top: 1px solid rgba(169, 79, 112, 0.2);
     color: var(--nav-dark-gray);
     text-align: center;
 }
@@ -245,7 +253,7 @@ body {
 .sidebar-branding::before {
     display: block;
     margin-bottom: 9px;
-    color: var(--nav-pink);
+    color: var(--nav-rose);
     content: "·  ·  ·";
     font-family: Georgia, "Times New Roman", serif;
     font-size: 15px;
@@ -259,7 +267,7 @@ body {
     height: 3px;
     margin: 0 auto 10px;
     border-radius: 2px;
-    background-color: var(--nav-pink);
+    background-color: var(--nav-rose);
 }
 
 .sidebar-branding p {
@@ -371,6 +379,8 @@ body {
     position: relative;
 }
 
+/* Collapsed sidebar */
+
 body.sidebar-collapsed {
     --sidebar-width: 76px;
 }
@@ -422,6 +432,8 @@ body.sidebar-collapsed .sidebar button:focus-visible::after {
     transform: translate(0, -50%);
 }
 
+/* Shared page spacing */
+
 .menu-header,
 .gallery,
 .menu-content,
@@ -437,6 +449,7 @@ footer {
 }
 
 /* Keep the gallery offset even when gallery.css defines its own .gallery margin. */
+
 body .gallery {
     margin-left: var(--sidebar-width);
     margin-right: 0;
@@ -460,6 +473,8 @@ body .gallery {
 footer {
     transition: margin-left 220ms ease, width 220ms ease;
 }
+
+/* Mobile navigation */
 
 @media (max-width: 900px) {
     :root {
@@ -485,7 +500,7 @@ footer {
         justify-content: center;
         gap: 5px;
         order: 2;
-        border: 1px solid rgba(185, 71, 125, 0.25);
+        border: 1px solid rgba(169, 79, 112, 0.25);
         border-radius: 10px;
         background: #FFF8F0;
         cursor: pointer;
@@ -556,7 +571,7 @@ footer {
         gap: 2px;
         margin: 0 0 16px;
         padding-bottom: 14px;
-        border-bottom: 1px solid rgba(185, 71, 125, 0.2);
+        border-bottom: 1px solid rgba(169, 79, 112, 0.2);
     }
 
     .sidebar-site-nav a {
@@ -576,6 +591,8 @@ footer {
         padding-left: 16px;
     }
 }
+
+/* Reduced motion accessibility */
 
 @media (prefers-reduced-motion: reduce) {
     *,

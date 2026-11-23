@@ -1,121 +1,318 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Raine's Cakes and Patries</title>
-        <link rel="stylesheet" href="../css/about.css">
-        <link rel="stylesheet" href="../css/nav.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Raine's Cakes and Pastries</title>
 
-    <body>
-        <!--Navigation-->
-        <header>
-            <div class="top-container" id="logo">
-                <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
 
-                <button class="mobile-menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" aria-label="Open menu">
-                    <span></span><span></span><span></span>
-                </button>
+<body>
 
-                <nav id="nav-bar" aria-label="Main navigation">
-                    <a href="index.html">Home</a>
-                    <a href="about.html" aria-current="page">About Us</a>
-                    <a href="Products.html">Products</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="Contact.html">Contact Us</a>
-                </nav>
+    <!-- Navigation -->
+    <header>
+        <div class="top-container" id="logo">
+            <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
+
+            <button class="mobile-menu-toggle" type="button"
+                aria-controls="site-sidebar" aria-expanded="false"
+                aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav-bar" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html" aria-current="page">About Us</a>
+                <a href="Products.html">Products</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="Contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="site-sidebar"
+        aria-label="User access panel" aria-hidden="false">
+
+        <button class="sidebar-collapse-toggle" type="button"
+            aria-controls="site-sidebar" aria-expanded="true"
+            aria-label="Collapse sidebar">
+            <span aria-hidden="true">‹</span>
+        </button>
+
+        <nav class="sidebar-site-nav" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About Us</a>
+            <a href="Products.html">Products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="Contact.html">Contact Us</a>
+        </nav>
+
+        <div class="sidebar-brand">
+            <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
+            <div>
+                <strong>Raine's</strong>
+                <small>Welcome back!</small>
             </div>
-        </header>
-
-        <!--Sidebar Navigation-->
-        <aside class="sidebar" id="site-sidebar" aria-label="User access panel" aria-hidden="false">
-    <button class="sidebar-collapse-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="Collapse sidebar"><span aria-hidden="true">‹</span></button>
-    <nav class="sidebar-site-nav" aria-label="Site navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html" aria-current="page">About Us</a>
-        <a href="Products.html">Products</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="Contact.html">Contact Us</a>
-    </nav>
-
-    <div class="sidebar-brand">
-        <img src="../assets/logo.jpg" alt="Raine's Cakes and Pastries logo">
-        <div>
-            <strong>Raine's</strong>
-            <small>Welcome back!</small>
         </div>
+
+        <section class="sidebar-section" aria-labelledby="profile-section">
+            <h2 class="sidebar-section-title" id="profile-section">PROFILE</h2>
+
+            <button type="button" data-tooltip="My Profile" aria-label="My Profile">
+                <img class="sidebar-icon" src="../assets/sidebar/profile.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">My Profile</span>
+            </button>
+
+            <button type="button" data-tooltip="Favorites" aria-label="Favorites">
+                <img class="sidebar-icon" src="../assets/sidebar/favorites.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">Favorites</span>
+            </button>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="raine-section">
+            <h2 class="sidebar-section-title" id="raine-section">RAINE'S</h2>
+
+            <button type="button" data-tooltip="My Orders" aria-label="My Orders">
+                <img class="sidebar-icon" src="../assets/sidebar/orders.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">My Orders</span>
+            </button>
+
+            <button type="button" data-tooltip="Our Branches" aria-label="Our Branches">
+                <img class="sidebar-icon" src="../assets/sidebar/location.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">Our Branches</span>
+            </button>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="support-section">
+            <h2 class="sidebar-section-title" id="support-section">SUPPORT</h2>
+
+            <button type="button" data-tooltip="Settings" aria-label="Settings">
+                <img class="sidebar-icon" src="../assets/sidebar/settings.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">Settings</span>
+            </button>
+
+            <button type="button" data-tooltip="Help &amp; Support" aria-label="Help &amp; Support">
+                <img class="sidebar-icon" src="../assets/sidebar/help.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">Help &amp; Support</span>
+            </button>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="account-section">
+            <h2 class="sidebar-section-title" id="account-section">ACCOUNT</h2>
+
+            <button type="button" data-tooltip="Log Out" aria-label="Log Out">
+                <img class="sidebar-icon" src="../assets/sidebar/logout.svg" alt="" aria-hidden="true">
+                <span class="sidebar-label">Log Out</span>
+            </button>
+        </section>
+
+        <div class="sidebar-editorial" aria-hidden="true">BAKED WITH LOVE</div>
+
+        <div class="sidebar-branding" aria-hidden="true">
+            <span></span>
+            <p>MADE FOR SWEET<br>MOMENTS.</p>
+        </div>
+    </aside>
+
+    <button class="sidebar-backdrop" type="button"
+        aria-label="Close menu" hidden></button>
+
+
+    <!-- Editorial Decorations -->
+    <div class="about-editorial about-editorial-left" aria-hidden="true">
+        <span class="editorial-phrase editorial-phrase-top">BAKED WITH LOVE</span>
+        <span class="editorial-mark">•</span>
+        <span class="editorial-phrase editorial-phrase-bottom">
+            RAINE'S<br>CAKES &amp;<br>PASTRIES
+        </span>
     </div>
 
-    <section class="sidebar-section" aria-labelledby="profile-section">
-        <h2 class="sidebar-section-title" id="profile-section">PROFILE</h2>
-        <button type="button" data-tooltip="My Profile" aria-label="My Profile"><img class="sidebar-icon" src="../assets/sidebar/profile.svg" alt="" aria-hidden="true"><span class="sidebar-label">My Profile</span></button>
-        <button type="button" data-tooltip="Favorites" aria-label="Favorites"><img class="sidebar-icon" src="../assets/sidebar/favorites.svg" alt="" aria-hidden="true"><span class="sidebar-label">Favorites</span></button>
-    </section>
-
-    <section class="sidebar-section" aria-labelledby="raine-section">
-        <h2 class="sidebar-section-title" id="raine-section">RAINE'S</h2>
-        <button type="button" data-tooltip="My Orders" aria-label="My Orders"><img class="sidebar-icon" src="../assets/sidebar/orders.svg" alt="" aria-hidden="true"><span class="sidebar-label">My Orders</span></button>
-        <button type="button" data-tooltip="Our Branches" aria-label="Our Branches"><img class="sidebar-icon" src="../assets/sidebar/location.svg" alt="" aria-hidden="true"><span class="sidebar-label">Our Branches</span></button>
-    </section>
-
-    <section class="sidebar-section" aria-labelledby="support-section">
-        <h2 class="sidebar-section-title" id="support-section">SUPPORT</h2>
-        <button type="button" data-tooltip="Settings" aria-label="Settings"><img class="sidebar-icon" src="../assets/sidebar/settings.svg" alt="" aria-hidden="true"><span class="sidebar-label">Settings</span></button>
-        <button type="button" data-tooltip="Help &amp; Support" aria-label="Help &amp; Support"><img class="sidebar-icon" src="../assets/sidebar/help.svg" alt="" aria-hidden="true"><span class="sidebar-label">Help &amp; Support</span></button>
-    </section>
-
-    <section class="sidebar-section" aria-labelledby="account-section">
-        <h2 class="sidebar-section-title" id="account-section">ACCOUNT</h2>
-        <button type="button" data-tooltip="Log Out" aria-label="Log Out"><img class="sidebar-icon" src="../assets/sidebar/logout.svg" alt="" aria-hidden="true"><span class="sidebar-label">Log Out</span></button>
-    </section>
-    <div class="sidebar-editorial" aria-hidden="true">BAKED WITH LOVE</div>
-    <div class="sidebar-branding" aria-hidden="true">
-        <span></span>
-        <p>MADE FOR SWEET<br>MOMENTS.</p>
+    <div class="about-editorial about-editorial-right" aria-hidden="true">
+        <span class="editorial-phrase editorial-phrase-top">
+            MADE FOR SWEET<br>MOMENTS.
+        </span>
+        <span class="editorial-mark">•</span>
+        <span class="editorial-phrase editorial-phrase-bottom">FRESHLY BAKED</span>
     </div>
-</aside>
-        <button class="sidebar-backdrop" type="button" aria-label="Close menu" hidden></button>
 
-        <div class="about-editorial about-editorial-left" aria-hidden="true">
-            <span class="editorial-phrase editorial-phrase-top">BAKED WITH LOVE</span>
-            <span class="editorial-mark">•</span>
-            <span class="editorial-phrase editorial-phrase-bottom">RAINE'S<br>CAKES &amp;<br>PASTRIES</span>
-        </div>
-        <div class="about-editorial about-editorial-right" aria-hidden="true">
-            <span class="editorial-phrase editorial-phrase-top">MADE FOR SWEET<br>MOMENTS.</span>
-            <span class="editorial-mark">•</span>
-            <span class="editorial-phrase editorial-phrase-bottom">FRESHLY BAKED</span>
-        </div>
 
-        <!--Business History-->
-        <div class="main-container">
-            <h1>A little about Raine's</h1>
+    <!-- About Us Main Content -->
+    <main class="main-container">
+
+        <!-- Introduction -->
+        <section class="about-heading">
+            <span class="about-kicker">ABOUT RAINE'S</span>
+
+            <h1>Our Story</h1>
+
+            <p>
+                Get to know the story behind Raine's Cakes and Pastries.
+            </p>
+
+            <span class="heading-decoration"></span>
+        </section>
+
+
+        <!-- Story Section -->
+        <section class="story-section">
+
+            <div class="story-section-heading">
+                <span>A LITTLE BIT OF HISTORY</span>
+                <span>01 / OUR BEGINNING</span>
+            </div>
+
             <div class="story-layout">
+
+                <!-- Story Aside -->
                 <aside class="story-aside" aria-label="Raine's story details">
-                    <span>OUR BEGINNING</span>
-                    <strong>EST. 2023</strong>
-                    <img src="../assets/logo.jpg" id="text-wrap" alt="Raine's Cakes and Pastries logo">
-                    <img class="story-photo" src="../assets/homephoto.jpg" alt="Raine's Cakes and Pastries cafe">
+
+                    <div class="story-brand-card">
+                        <span class="story-label">OUR BEGINNING</span>
+
+                        <img src="../assets/logo.jpg"
+                            class="story-logo"
+                            alt="Raine's Cakes and Pastries logo">
+
+                        <strong>EST. 2023</strong>
+
+                        <p>A place made for sweet moments.</p>
+                    </div>
+
+                    <div class="story-photo-card">
+                        <img class="story-photo"
+                            src="../assets/homephoto.jpg"
+                            alt="Raine's Cakes and Pastries cafe">
+
+                        <span>BAKED WITH LOVE</span>
+                    </div>
+
                 </aside>
-                <div class="story-copy">
-                    <p>Raine's Cakes and Patries is a bakery and cafÃ© that was established in 2023 with the goal of providing freshly baked products, quality beverages, and a comfortable place for customers to relax and enjoy good food. The business was founded with a vision of combining traditional baking with a welcoming cafÃ© experience. From the beginning, the owners focused on providing quality products and friendly service to meet the needs of the local community.</p>
-                    <p>Since opening in 2023, Raine's Cakes and Patries has gradually developed its customer base through its selection of freshly baked breads, pastries, cakes, coffee, and other refreshments. The business has worked to maintain consistent quality while listening to customer feedback and improving its products and services. Its welcoming atmosphere and commitment to customer satisfaction have helped it establish a positive presence in the community.</p>
-                    <p>Throughout its years of operation, the business has experienced various challenges involved in managing a bakery and cafÃ©, including controlling costs, maintaining product quality, and responding to changing customer preferences. These experiences have allowed the owners and staff to gain valuable knowledge in business management and daily operations. Through continuous improvement and dedication, Raine's Cakes and Patries has continued to serve its customers and strengthen its position in the local market.</p>
-                    <p>Moving forward, Raine's Cakes and Patries aims to continue growing and becoming a trusted bakery and cafÃ© in the community. The business plans to improve its products and services, introduce new offerings, and expand its customer base while maintaining the quality and welcoming environment that customers have come to appreciate. With its experience since 2023 and commitment to customer satisfaction, the business looks forward to continued growth and success.</p>
+
+
+                <!-- Story Text -->
+                <div class="story-copy-card">
+
+                    <div class="story-copy-heading">
+                        <span class="story-label">THE JOURNEY SO FAR</span>
+                        <h2>Where it all began.</h2>
+                    </div>
+
+                    <div class="story-copy">
+
+                        <p>
+                            Raine's Cakes and Pastries is a bakery and café that was
+                            established in 2023 with the goal of providing freshly
+                            baked products, quality beverages, and a comfortable
+                            place for customers to relax and enjoy good food. The
+                            business was founded with a vision of combining
+                            traditional baking with a welcoming café experience.
+                            From the beginning, the owners focused on providing
+                            quality products and friendly service to meet the needs
+                            of the local community.
+                        </p>
+
+                        <p>
+                            Since opening in 2023, Raine's Cakes and Pastries has
+                            gradually developed its customer base through its
+                            selection of freshly baked breads, pastries, cakes,
+                            coffee, and other refreshments. The business has worked
+                            to maintain consistent quality while listening to
+                            customer feedback and improving its products and
+                            services. Its welcoming atmosphere and commitment to
+                            customer satisfaction have helped it establish a
+                            positive presence in the community.
+                        </p>
+
+                        <p>
+                            Throughout its years of operation, the business has
+                            experienced various challenges involved in managing a
+                            bakery and café, including controlling costs, maintaining
+                            product quality, and responding to changing customer
+                            preferences. These experiences have allowed the owners
+                            and staff to gain valuable knowledge in business
+                            management and daily operations. Through continuous
+                            improvement and dedication, Raine's Cakes and Pastries
+                            has continued to serve its customers and strengthen its
+                            position in the local market.
+                        </p>
+
+                        <p>
+                            Moving forward, Raine's Cakes and Pastries aims to
+                            continue growing and becoming a trusted bakery and café
+                            in the community. The business plans to improve its
+                            products and services, introduce new offerings, and
+                            expand its customer base while maintaining the quality
+                            and welcoming environment that customers have come to
+                            appreciate. With its experience since 2023 and
+                            commitment to customer satisfaction, the business looks
+                            forward to continued growth and success.
+                        </p>
+
+                    </div>
+
+                    <div class="story-signature">
+                        <span>♡</span>
+                        <p>Made for sweet moments.</p>
+                    </div>
+
                 </div>
+
             </div>
-        </div>
+        </section>
 
-        <!--Footer-->
-        <footer>
-            <p>Raine's Cakes and Patries | Infante St., Molo, Iloilo City | Gate 4 CPU Lopez Jaena St. Brgy. San Isidro, Jaro, Iloilo City</p>
-            <p>Phone: +63 960 863 6821 | Facebook: Raine's Cakes and Patries</p>
-            <p>&copy; 2025 All rights reserved.</p>
-        </footer>
-        <script src="../js/nav.js" defer></script>
-    </body>
 
+        <!-- Highlights -->
+        <section class="about-highlights">
+
+            <div class="highlight-card highlight-pink">
+                <span class="highlight-number">01</span>
+                <h2>Freshly Baked.</h2>
+                <p>Made to bring people together.</p>
+            </div>
+
+            <div class="highlight-card highlight-yellow">
+                <span class="highlight-number">02</span>
+                <h2>Made with Care.</h2>
+                <p>For life's little celebrations.</p>
+            </div>
+
+        </section>
+
+
+        <!-- Closing Message -->
+        <section class="about-closing">
+            <span>RAINE'S CAKES AND PASTRIES</span>
+            <h2>Made for sweet moments.</h2>
+            <p>Thank you for being part of our story.</p>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Raine's Cakes and Pastries |
+            Infante St., Molo, Iloilo City |
+            Gate 4 CPU Lopez Jaena St. Brgy. San Isidro, Jaro, Iloilo City
+        </p>
+
+        <p>
+            Phone: +63 960 863 6821 |
+            Facebook: Raine's Cakes and Pastries
+        </p>
+
+        <p>&copy; 2025 All rights reserved.</p>
+    </footer>
+
+    <script src="../js/nav.js" defer></script>
+
+</body>
 </html>
-
-

@@ -1,11 +1,16 @@
-/* About page palette and editorial layout */
+
+/* About page palette and rounded editorial layout */
+
 :root {
-    --about-pink: #F599C6;
-    --about-cream: #FFEED6;
-    --about-dark-gray: #4A4A4A;
-    --about-white: #FFFFFF;
-    --about-rose: #B9477D;
-    --about-mocha: #795548;
+    --about-strawberry: #B83250;
+    --about-rose: #E77B91;
+    --about-pink: #F5B8CC;
+    --about-blush: #FCE9EF;
+    --about-peach: #FFF0E9;
+    --about-butter: #F4D68A;
+    --about-berry: #542A3A;
+    --about-white: #FFF9F6;
+    --about-muted: #806773;
 }
 
 html,
@@ -16,19 +21,22 @@ body {
 }
 
 body {
-	position: relative;
-    background-color: var(--about-cream);
-    color: var(--about-dark-gray);
+    position: relative;
+    background-color: var(--about-peach);
+    color: var(--about-berry);
     font-family: "Poppins", Arial, sans-serif;
 }
+
+
+/* Editorial Side Decorations */
 
 .about-editorial {
     position: absolute;
     z-index: 1;
-    color: var(--about-pink);
+    color: var(--about-rose);
     font-family: "Poppins", Arial, sans-serif;
     font-weight: 700;
-    opacity: 0.8;
+    opacity: 0.65;
     pointer-events: none;
     text-align: center;
 }
@@ -46,8 +54,8 @@ body {
 .editorial-phrase {
     display: block;
     padding: 0 10px;
-    border-left: 1px solid var(--about-pink);
-    border-right: 1px solid var(--about-pink);
+    border-left: 1px solid var(--about-rose);
+    border-right: 1px solid var(--about-rose);
     font-size: 10px;
     letter-spacing: 0.18em;
     line-height: 1.5;
@@ -66,7 +74,7 @@ body {
 
 .editorial-phrase-bottom {
     margin-top: 8rem;
-    color: var(--about-dark-gray);
+    color: var(--about-muted);
     font-size: 9px;
     transform-origin: left center;
     transform: rotate(-90deg);
@@ -80,9 +88,12 @@ body {
 .editorial-mark {
     display: block;
     margin-top: 3.5rem;
-    color: var(--about-pink);
+    color: var(--about-strawberry);
     font-size: 18px;
 }
+
+
+/* Main Container */
 
 .main-container {
     box-sizing: border-box;
@@ -91,175 +102,359 @@ body {
     margin-left: var(--sidebar-width);
     padding: 64px clamp(32px, 5vw, 72px) 72px;
     background:
-        linear-gradient(135deg, rgba(245,153,198,.12), transparent 26rem),
-        var(--about-cream);
+        radial-gradient(circle at 10% 5%, rgba(255, 249, 246, 0.9), transparent 25rem),
+        var(--about-peach);
+}
+
+
+/* Page Introduction */
+
+.about-heading {
+    width: min(100%, 1100px);
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 42px 30px;
+    border: 1px solid rgba(184, 50, 80, 0.12);
+    border-radius: 30px;
+    background: var(--about-blush);
     text-align: center;
 }
 
-.main-container::before {
+.about-kicker {
     display: block;
-    margin-bottom: 10px;
-    color: var(--about-pink);
-    content: "ABOUT RAINE'S";
-    font-family: "Poppins", Arial, sans-serif;
-    font-size: 13px;
+    margin-bottom: 12px;
+    color: var(--about-strawberry);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
 }
 
-.main-container h1 {
+.about-heading h1 {
     margin: 0;
-    color: var(--about-dark-gray);
+    color: var(--about-berry);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 0;
-    font-weight: 700;
-    line-height: 1.05;
-}
-
-.main-container h1::before {
-    display: block;
-    content: "Our Story";
     font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
 }
 
-.main-container h1::after {
-    display: block;
+.about-heading p {
     max-width: 520px;
-    margin: 18px auto 0;
-    color: var(--about-dark-gray);
-    content: "Get to know the story behind Raine's Cakes and Pastries.";
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-}
-
-.main-container::after {
-    display: block;
-    width: 48px;
-    height: 3px;
-    margin: 28px auto 0;
-    border-radius: 2px;
-    background-color: var(--about-pink);
-    content: "";
-}
-
-.story-layout {
-    position: relative;
-    display: grid;
-    grid-template-columns: minmax(180px, 0.32fr) minmax(0, 1fr);
-    align-items: start;
-    gap: clamp(28px, 5vw, 72px);
-    width: min(100%, 1100px);
-    margin: 42px auto 0;
-    padding: clamp(32px, 5vw, 64px);
-    overflow: hidden;
-    border: 0;
-    border-radius: 4px 42px 42px 4px;
-    background-color: var(--about-white);
-    box-shadow: 0 8px 20px rgba(74, 74, 74, 0.1);
-    text-align: left;
-}
-
-.story-layout::before {
-    position: absolute;
-    top: 28px;
-    bottom: 28px;
-    left: 0;
-    width: 4px;
-    border-radius: 0 3px 3px 0;
-    background-color: var(--about-pink);
-    content: "";
-}
-
-.story-layout > * {
-    position: relative;
-    z-index: 1;
-}
-
-.story-aside {
-    padding-top: 4px;
-    border-top: 1px solid var(--about-pink);
-    color: var(--about-pink);
-    font-family: "Poppins", Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.15em;
+    margin: 16px auto 0;
+    color: var(--about-muted);
+    font-size: 14px;
     line-height: 1.8;
 }
 
-.story-aside .story-photo {
+.heading-decoration {
     display: block;
-    width: 100%;
-    height: 220px;
-    margin-top: 22px;
-    border-radius: 18px 18px 64px 18px;
+    width: 48px;
+    height: 4px;
+    margin: 24px auto 0;
+    border-radius: 10px;
+    background: var(--about-strawberry);
+}
+
+
+/* Main Story Outer Rectangle */
+
+.story-section {
+    width: min(100%, 1100px);
+    box-sizing: border-box;
+    margin: 42px auto 0;
+    padding: clamp(18px, 3vw, 30px);
+    border-radius: 30px;
+    background: var(--about-strawberry);
+    box-shadow: 0 14px 32px rgba(84, 42, 58, 0.12);
+}
+
+.story-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: var(--about-white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+
+/* Story Inner Layout */
+
+.story-layout {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1.8fr);
+    align-items: stretch;
+    gap: 18px;
+}
+
+
+/* Story Aside */
+
+.story-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.story-brand-card,
+.story-photo-card {
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 22px;
+    background: var(--about-white);
+}
+
+.story-brand-card {
+    padding: 22px 16px;
+    text-align: center;
+}
+
+.story-label {
+    display: block;
+    color: var(--about-strawberry);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.story-logo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    max-width: 100%;
+    margin: 22px auto 16px;
+    border: 5px solid var(--about-blush);
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 12px 24px rgba(74, 74, 74, 0.14);
+    box-shadow: 0 8px 18px rgba(84, 42, 58, 0.1);
 }
 
-.story-aside span,
-.story-aside strong {
+.story-brand-card strong {
     display: block;
-}
-
-.story-aside strong {
-    margin-top: 8px;
-    color: var(--about-pink);
+    color: var(--about-strawberry);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 18px;
+    font-size: 21px;
     letter-spacing: 0.08em;
 }
 
-.story-copy p {
+.story-brand-card p {
+    margin: 8px 0 0;
+    color: var(--about-muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* Story Photo */
+
+.story-photo-card {
+    position: relative;
+    padding: 10px;
+}
+
+.story-photo {
+    display: block;
     width: 100%;
-    max-width: 920px;
-    margin: 0 0 22px;
-    color: var(--about-dark-gray);
-    font-family: "Poppins", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.85;
+    height: 190px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.story-photo-card span {
+    display: block;
+    padding: 12px 4px 3px;
+    color: var(--about-strawberry);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-align: center;
+}
+
+
+/* Story Copy Rectangle */
+
+.story-copy-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(22px, 3vw, 36px);
+    border-radius: 22px;
+    background: var(--about-white);
+}
+
+.story-copy-heading {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(184, 50, 80, 0.15);
+}
+
+.story-copy-heading h2 {
+    margin: 10px 0 0;
+    color: var(--about-berry);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.2;
+}
+
+.story-copy p {
+    margin: 0 0 20px;
+    color: var(--about-muted);
+    font-size: 13px;
+    line-height: 1.9;
     text-align: left;
 }
 
 .story-copy p:first-of-type {
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 30px;
-    padding-left: 20px;
-    border-left: 3px solid var(--about-pink);
-    font-size: 17px;
-    line-height: 1.75;
+    padding-left: 16px;
+    border-left: 3px solid var(--about-rose);
+    color: var(--about-berry);
+    font-size: 14px;
+    line-height: 1.85;
 }
 
-#text-wrap {
-    display: block;
-    width: 132px;
-    height: 132px;
-    margin: 28px auto 0;
-    border: 6px solid var(--about-white);
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 8px 18px rgba(74, 74, 74, 0.14);
+.story-copy p:last-of-type {
+    margin-bottom: 0;
 }
+
+
+/* Story Signature */
+
+.story-signature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(184, 50, 80, 0.15);
+}
+
+.story-signature span {
+    color: var(--about-strawberry);
+    font-size: 23px;
+}
+
+.story-signature p {
+    margin: 0;
+    color: var(--about-strawberry);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+/* Highlight Cards */
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: min(100%, 1100px);
+    margin: 24px auto 0;
+}
+
+.highlight-card {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 150px;
+    padding: 28px;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.highlight-pink {
+    background: var(--about-pink);
+}
+
+.highlight-yellow {
+    background: var(--about-butter);
+}
+
+.highlight-number {
+    display: block;
+    margin-bottom: 12px;
+    color: rgba(84, 42, 58, 0.55);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.highlight-card h2 {
+    margin: 0;
+    color: var(--about-berry);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+}
+
+.highlight-card p {
+    margin: 9px 0 0;
+    color: var(--about-berry);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* Closing Section */
+
+.about-closing {
+    box-sizing: border-box;
+    width: min(100%, 1100px);
+    margin: 24px auto 0;
+    padding: 42px 24px;
+    border-radius: 26px;
+    background: var(--about-berry);
+    text-align: center;
+}
+
+.about-closing span {
+    color: var(--about-pink);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.about-closing h2 {
+    margin: 12px 0 8px;
+    color: var(--about-white);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.about-closing p {
+    margin: 0;
+    color: var(--about-pink);
+    font-size: 12px;
+}
+
+
+/* Footer */
 
 footer {
     box-sizing: border-box;
     width: calc(100% - var(--sidebar-width));
     margin-left: var(--sidebar-width);
     padding: 26px 32px 30px;
-    border-top: 1px solid var(--about-pink);
-    background-color: #FFFFFF;
-    color: var(--about-dark-gray);
+    border-top: 1px solid rgba(245, 184, 204, 0.2);
+    background: var(--about-berry);
+    color: var(--about-white);
     font-family: "Poppins", Arial, sans-serif;
     text-align: center;
 }
 
 footer p {
     margin: 5px auto;
-    font-size: 12px;
-    line-height: 1.6;
+    color: var(--about-white);
+    font-size: 11px;
+    line-height: 1.7;
 }
 
+
+/* Tablet */
+
 @media (max-width: 900px) {
+
     .about-editorial {
         display: none;
     }
@@ -269,22 +464,32 @@ footer p {
     }
 
     .story-layout {
-        grid-template-columns: 120px minmax(0, 1fr);
-        gap: 28px;
-        padding: 32px;
+        grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.5fr);
+        gap: 14px;
+    }
+
+    .story-copy-card {
+        padding: 24px;
     }
 
     .story-copy p {
-        width: 100%;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .story-copy p:first-of-type {
-        font-size: 16px;
+        font-size: 13px;
+    }
+
+    .story-photo {
+        height: 160px;
     }
 }
 
+
+/* Mobile */
+
 @media (max-width: 650px) {
+
     .main-container,
     footer {
         width: 100%;
@@ -292,49 +497,154 @@ footer p {
     }
 
     .main-container {
-        display: block;
-        padding: 42px 18px 48px;
-        text-align: center;
+        padding: 36px 16px 44px;
+    }
+
+    .about-heading {
+        padding: 32px 20px;
+        border-radius: 24px;
+    }
+
+    .about-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-heading p {
+        font-size: 13px;
+    }
+
+    .story-section {
+        margin-top: 28px;
+        padding: 16px;
+        border-radius: 24px;
+    }
+
+    .story-section-heading {
+        font-size: 8px;
+        letter-spacing: 0.1em;
     }
 
     .story-layout {
-        display: block;
-        width: 100%;
-        margin-top: 32px;
-    }
-
-    .story-copy p,
-    .story-copy p:first-of-type {
-        width: 100%;
-        max-width: none;
-        box-sizing: border-box;
-        padding-left: 14px;
-        font-size: 14px;
-        text-align: left;
-    }
-
-    .main-container h1::after {
-        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
     }
 
     .story-aside {
-        margin-bottom: 28px;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        gap: 12px;
     }
 
-    #text-wrap {
-        width: 112px;
-        height: 112px;
-        margin: 22px auto 0;
+    .story-brand-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 10px;
     }
 
-    .story-aside .story-photo {
-        height: 180px;
-        max-width: 260px;
-        margin: 22px auto 0;
+    .story-logo {
+        width: 90px;
+        height: 90px;
+        margin: 18px auto 12px;
+    }
+
+    .story-brand-card strong {
+        font-size: 18px;
+    }
+
+    .story-brand-card p {
+        font-size: 10px;
+    }
+
+    .story-photo-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .story-photo {
+        height: 130px;
+    }
+
+    .story-photo-card span {
+        font-size: 8px;
+    }
+
+    .story-copy-card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .story-copy-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .story-copy p {
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .story-copy p:first-of-type {
+        font-size: 13px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .highlight-card {
+        min-height: 140px;
+        padding: 20px 16px;
+        border-radius: 19px;
+    }
+
+    .highlight-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .highlight-card p {
+        font-size: 11px;
+    }
+
+    .about-closing {
+        margin-top: 18px;
+        padding: 34px 18px;
+        border-radius: 22px;
     }
 
     footer {
         padding: 22px 18px 26px;
     }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+
+    .story-aside {
+        grid-template-columns: 1fr;
+    }
+
+    .story-brand-card {
+        padding: 20px;
+    }
+
+    .story-photo {
+        height: 170px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
 }
